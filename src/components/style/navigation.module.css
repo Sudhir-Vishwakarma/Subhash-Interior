@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.navigationContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 100px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 1px 16px 1px gray;
+}
+.navigationContainer img{
+    width: 70px;
+}
+.navigationContainer .menu{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navigationContainer .menu .mainNavigation{
+    display: flex;
+    justify-content: center;
+}
+.navigationContainer .menu .mainNavigation li{
+    margin: 0px 20px;
+    list-style-type: none;
+}
+.navigationContainer .menu .mainNavigation li .navlink{
+    font-size: 1.1rem;
+    color: antiquewhite;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in;
+}
+.navigationContainer .menu .mainNavigation li .navlink:hover{
+    color: #06b453 !important;
+}
+.navigationContainer .menu .mainNavigation li .faHome{
+    width: 14px;
+    margin: 0px 5px;
+    color: antiquewhite;
+}
+.menu .mainNavigation li .navlink{
+    text-decoration: none;
+}
+.menu .mainNavigation .showMenu:hover .subNavigation{
+    display: grid;
+    top: 50px;
+    transition: all 0.5s ease-in;
+}
+.navigationContainer .menu .mainNavigation .subNavigation{
+    display: none;
+    top: -100px;
+    position: absolute;
+    width: 150px;
+    padding: 20px 0px;
+    border-radius: 10px;
+    border-bottom: 2px solid #06b453;
+    transition: all 0.3s ease-in;
+}
+.mainNavigation .subNavigation li{
+    margin: 5px 20px 10px 0px !important;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in;
+}
+.navigationContainer .menu .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 50px;
+}
+.navigationContainer .menu .register li{
+    list-style-type: none;
+    /* margin: 0px 10px; */
+    font-size: 1rem;
+    padding: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+}
+.navigationContainer .menu .register .login{
+    transition: all 0.2s ease-in;
+    font-weight: 700;
+}
+.navigationContainer .menu .register .login:hover{
+    color: #06b453;
+}
+.navigationContainer .menu .register .signin{
+    padding: 10px 30px;      
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #06b453;  
+    transition: all 0.2s ease-in;
+}
+.navigationContainer .menu .register .signin:hover{
+    color: #06b453;
+    background-color: transparent;
+    outline: 1px solid #06b453;
+}
+.menu .register li .navlink{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries pending */
+
+@media (max-width:1100px){
+
+}

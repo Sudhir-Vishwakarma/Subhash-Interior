@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+/*  Hero Section */
+
+
+.mainContainer{
+    width: 100%;
+    /* border: 1px solid orange; */
+    color: antiquewhite;
+}
+.mainContainer .heroSection{
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/homepage-img/hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.mainContainer .heroSection .heroSection2{
+    width: 75%;
+    margin: 0px auto;
+} 
+.mainContainer .heroSection h1{
+    font-size: 4rem;
+    margin: 10px 0px;
+}
+.mainContainer .heroSection p{
+    margin: 0px 0px 40px 0px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.mainContainer .heroSection button{
+    /* width: 100%; */
+    padding: 10px 30px;
+    background-color: #06b453;
+    margin: 0px 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    color: antiquewhite;
+    transition: all 0.2s ease-in;
+}
+.mainContainer .heroSection button:hover{
+    outline: 1px solid #06b453;
+    background: transparent;
+    color: #06b453;
+}
+
+/* About Section */
+
+.aboutSection{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutSection .about1{
+    width: 40%;
+}
+.aboutSection .about1 img{
+    width: 100%;
+}
+.aboutSection .about2{
+    width: 50%;
+    margin-left: 50px;
+}
+.aboutSection .about2 h3{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #06b453;
+    margin-bottom: 30px;
+}
+.aboutSection .about2 .abtTitle{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+.aboutSection .about2 .abtContent{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
