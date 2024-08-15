@@ -14,6 +14,7 @@
     background-color: black;
     position: fixed;
     top: 0;
+    z-index: 2;
     box-shadow: 0px 1px 16px 1px gray;
 }
 .navigationContainer img{
@@ -37,7 +38,7 @@
     font-size: 1.1rem;
     color: antiquewhite;
     letter-spacing: 1px;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
 }
 .navigationContainer .menu .mainNavigation li .navlink:hover{
     color: #06b453 !important;
@@ -50,62 +51,86 @@
 .menu .mainNavigation li .navlink{
     text-decoration: none;
 }
+.menu .mainNavigation .showMenu{
+    transition: all 0.3s ease-in;
+}
 .menu .mainNavigation .showMenu:hover .subNavigation{
     display: grid;
     top: 50px;
-    transition: all 0.5s ease-in;
+    transition: height 0.3s ease-in;
 }
 .navigationContainer .menu .mainNavigation .subNavigation{
     display: none;
-    top: -100px;
+    top: -110px;
     position: absolute;
-    width: 150px;
+    width: 200px;
     padding: 20px 0px;
     border-radius: 10px;
+    background-color: #000;
+    text-align: center;
     border-bottom: 2px solid #06b453;
-    transition: all 0.3s ease-in;
 }
 .mainNavigation .subNavigation li{
     margin: 5px 20px 10px 0px !important;
     letter-spacing: 1px;
     transition: all 0.5s ease-in;
 }
-.navigationContainer .menu .register{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0px 0px 50px;
-}
-.navigationContainer .menu .register li{
-    list-style-type: none;
-    /* margin: 0px 10px; */
-    font-size: 1rem;
-    padding: 10px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease-in;
-}
-.navigationContainer .menu .register .login{
-    transition: all 0.2s ease-in;
-    font-weight: 700;
-}
-.navigationContainer .menu .register .login:hover{
-    color: #06b453;
-}
-.navigationContainer .menu .register .signin{
-    padding: 10px 30px;      
-    border-radius: 10px;
-    font-weight: 700;
-    background-color: #06b453;  
-    transition: all 0.2s ease-in;
-}
-.navigationContainer .menu .register .signin:hover{
-    color: #06b453;
-    background-color: transparent;
-    outline: 1px solid #06b453;
-}
-.menu .register li .navlink{
-    text-decoration: none;
+.navigationContainer .menu .username{
     color: antiquewhite;
+    text-align: center;
+    margin: 0px 10px;
+}
+.navigationContainer .menu .username .welcome{
+    font-size: 1rem;
+    color: #06b453;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.navigationContainer .menu .username .users{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 5px 0px;
+    color: #fff;
+}
+.navigationContainer .menu button{
+    padding: 5px 15px;
+    margin-left: 50px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #06b453;
+    color: antiquewhite;
+    transition: 0.2s ease-in;
+}
+.navigationContainer .menu button:hover{
+    color: #06b453;
+    outline: 1px solid #06b453;
+    background-color: #000;
+}
+.navigationContainer .username1{
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    margin: 0px 10px;
+}
+.navigationContainer .username1 .welcome1{
+    font-size: 1.1rem;
+    color: #06b453;
+}
+.navigationContainer .username1 .users1{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 5px 0px;
+    color: #fff;
+}
+.navigationContainer .faBars{
+    color: #fff;
+}
+.mobilenavContainer{
+    display: none;
 }
 
 
@@ -118,6 +143,199 @@
 
 /* Media Queries pending */
 
-@media (max-width:1100px){
+@media (max-width:900px){
+    .navigationContainer{
+        width: 100%;
+        margin: 0px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigationContainer img{
+        width: 60px;
+    }
+    .navigationContainer .menu{
+        width: 90%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navigationContainer .menu .username{
+        display: none;
+    }
+    .navigationContainer .menu li{
+        margin: 10px 10px !important;
+        padding: 0px;
+        
+    }
+    .navigationContainer .menu .mainNavigation li .navlink{
+        padding: 0px;
+        font-size: 1rem;
+    }
+    .navigationContainer .menu button{
+        margin: 0px;
+        padding: 5px 10px;
+    }
+
+}
+
+@media (max-width:600px){
+
+
+    .navigationContainer{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .navigationContainer .logoContainer{
+        width: 100%;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navigationContainer .logoContainer img{
+        width: 100px;
+    }
+    .navigationContainer .logoContainer .iconFaBarsContainer{
+        padding: 5px;
+    }
+    .navigationContainer .logoContainer .iconFaBarsContainer .iconFaBars{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .navigationContainer .menu{
+        display: none;
+    }
+    .navigationContainer .menu .mainNavigation{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .navigationContainer .menu button{
+        margin: 50px 0px;
+
+    }
+
+
+
+
+    #container1,#container2{
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        opacity: 1;
+    }
+    .slidein {
+        transform: translateX(0);
+        opacity: 1;
+    }
+      
+    .slideout {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+      
+    #container2 .slidein {
+        transform: translateX(0);
+        opacity: 1;
+    }
+      
+    #container2 .slideout {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+
+    .mobilenavContainer{
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        color: antiquewhite;
+        padding: 0px 20px;
+    }
+    .mobilenavContainer .mobileLogoContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px;
+    }
+    .mobilenavContainer .mobileLogoContainer img{
+        width: 100px;
+    }
+    .mobilenavContainer .mobileLogoContainer .mobileFaTimesContainer{
+        padding: 5px;
+    }
+    .mobilenavContainer .mobileLogoContainer .mobileFaTimesContainer .mobileFaTimes{
+        font-size: 1.5rem;
+    }
+    .mobilenavContainer .mobileUsername{
+        width: 100%;
+        padding: 30px 0px;
+    }
+    .mobilenavContainer .mobileUsername .mobileWelcome{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #06b453;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    .mobilenavContainer .mobileUsername .mobileUsers{
+        font-size: 1rem;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+    .mobilenavContainer .mobileMenu .mobilemainNavigation .mobileShowMenu {
+        color: #06b453;
+    }
+    .mobilenavContainer .mobileMenu .mobilemainNavigation{
+        width: 100%;
+    }
+    .mobilenavContainer .mobileMenu .mobilemainNavigation li{
+        list-style-type: none;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    .mobilenavContainer .mobileMenu .mobilemainNavigation li .mobileNavlink{
+        color: antiquewhite;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .mobilenavContainer .mobileMenu button{
+        margin: 100px 0px 50px 0px;
+        padding: 5px 15px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #06b453;
+        color: antiquewhite;
+    }
+    .mobilenavContainer .mobileMenu button:hover{
+        outline: 1px solid #06b453;
+        color: #06b453;
+        background: #000;
+    }
+    .mobilenavContainer .mobileMenu .mobileSubNavigation{
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-height: 0px;
+    }
+    .mobilenavContainer .mobileMenu .mobileSubNavigation.show{
+        transition: max-height 0.3s ease;
+        opacity: 1;
+    }
+    .mobilenavContainer .mobileMenu .mobileSubNavigation.hide{
+        max-height: 0;
+        transition: max-height 0.3s ease;
+        opacity: 0;
+    }
 
 }

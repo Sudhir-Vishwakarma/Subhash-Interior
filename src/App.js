@@ -1,11 +1,11 @@
 import React from "react";
-import Path from "./components/pages/route";
+import MainComponent from "./components/pages/mainComponent";
+
 
 const App = ()=>{
     return (
         <div>
-            
-            <Path /> 
+            <MainComponent />
         </div>
     )
 }
